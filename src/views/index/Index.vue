@@ -1,15 +1,34 @@
 <template>
   <div class="index-container">
-      index
+      <el-row class="menu">
+        <el-col :span="5">
+          <Menu />
+        </el-col>
+        <el-col :span="19">
+          <Life />
+        </el-col>
+      </el-row>
+      <el-row>
+        container
+      </el-row>
   </div>
 </template>
 
 <script>
-export default {
+import Menu from '@/components/index/Menu.vue';
+import Life from '@/components/index/Life.vue';
 
+export default {
+  components: {
+    Menu,
+    Life,
+  },
 };
 </script>
 
-<style>
-
+<style lang="less" scoped>
+.index-container {
+  width: 1190px;
+  margin: 0 auto;
+}
 </style>
