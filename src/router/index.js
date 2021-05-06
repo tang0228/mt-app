@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '@/views/Home.vue';
 import Entry from '@/views/Entry.vue';
 import Index from '@/views/index/Index.vue';
+import ChangeCity from '@/views/changeCity/ChangeCity.vue';
 
 Vue.use(VueRouter);
 
@@ -17,6 +18,11 @@ const routes = [
         path: 'index',
         name: 'index',
         component: Index,
+      },
+      {
+        path: 'changeCity',
+        name: 'changeCity',
+        component: ChangeCity,
       },
     ],
   },

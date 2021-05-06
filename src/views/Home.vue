@@ -4,7 +4,7 @@
       <el-header height="">
         <Header />
       </el-header>
-      <el-main>
+      <el-main overflow="">
           <RouterView />
       </el-main>
       <el-footer height="">
@@ -31,6 +31,9 @@ export default {
   background-color: #f8f8f8;
   .el-header {
       padding: 0;
+  }
+  .el-main {
+    overflow: visible;
   }
 }
 </style>

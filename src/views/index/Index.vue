@@ -1,6 +1,6 @@
 <template>
   <div class="index-container">
-      <el-row class="menu">
+      <el-row>
         <el-col :span="5">
           <Menu />
         </el-col>

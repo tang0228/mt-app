@@ -8,6 +8,13 @@ import '@/assets/css/reset.less';
 
 Vue.use(ElementUI);
 
+Vue.directive('document-click', {
+  bind(el, binding) {
+    console.log(el);
+    document.addEventListener('click', binding.value, false);
+  },
+});
+
 Vue.config.productionTip = false;
 
 new Vue({
