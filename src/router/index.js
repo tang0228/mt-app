@@ -4,6 +4,7 @@ import Home from '@/views/Home.vue';
 import Entry from '@/views/Entry.vue';
 import Index from '@/views/index/Index.vue';
 import ChangeCity from '@/views/changeCity/ChangeCity.vue';
+import GoodsList from '@/views/goodsList/GoodsList.vue';
 
 Vue.use(VueRouter);
 
@@ -14,6 +15,11 @@ const routes = [
     component: Home,
     redirect: '/index',
     children: [
+      {
+        path: 'goods/:name',
+        name: 'goods',
+        component: GoodsList,
+      },
       {
         path: 'index',
         name: 'index',

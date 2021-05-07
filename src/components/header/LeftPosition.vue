@@ -2,7 +2,7 @@
   <div class="left-position-container">
     <div class="position">
       <i class="el-icon-location-information"></i>
-      南昌
+      {{position}}
       <RouterLink :to="{ name: 'changeCity' }" class="change-city"> 切换城市 </RouterLink>
       [
       <a href="#">奉新</a>
@@ -18,7 +18,13 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from 'vuex';
+
+export default {
+  computed: {
+    ...mapState(['position']),
+  },
+};
 </script>
 
 <style lang="less" scoped>

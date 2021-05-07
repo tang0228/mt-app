@@ -44,8 +44,8 @@ export default {
     return {
       searchWord: '',
       isFocus: false,
-      keyWordList: ['火锅', '烤肉', '饮料'],
-      searchList: ['火锅', '麻辣火锅', '火锅底料'],
+      keyWordList: ['火锅', '烤肉', '饮料', '啤酒'],
+      searchList: ['火锅', '麻辣火锅', '火锅底料', '烤肉', '饮料', '啤酒'],
     };
   },
   computed: {
@@ -122,6 +122,7 @@ export default {
         font-size: 12px;
         border-top: none;
         line-height: 10px;
+        z-index: 88;
         dt {
           margin-bottom: 5px;
           font-size: 13px;
