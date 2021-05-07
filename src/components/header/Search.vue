@@ -17,7 +17,7 @@
             @blur="blur"
           ></el-input>
           <el-button icon="el-icon-search" class="btn"></el-button>
-          <dl v-if="showKeyWord" class="key-word">
+          <dl v-show="showKeyWord" class="key-word">
             <dt>最近搜索</dt>
             <dd v-for="(item, i) in keyWordList" :key="i">
               <RouterLink :to="{ name: 'goods', params: { name: item } }">{{
@@ -25,7 +25,7 @@
               }}</RouterLink>
             </dd>
           </dl>
-          <dl v-if="showSearchList" class="search-list">
+          <dl v-show="showSearchList" class="search-list">
             <dd v-for="(item, i) in searchList" :key="i">
               <RouterLink :to="{ name: 'goods', params: { name: item } }">{{
                 item
@@ -73,6 +73,7 @@ export default {
 .search-container {
   width: 1190px;
   margin: 0 auto;
+  padding-bottom: 35px;
   .left {
     padding-top: 28px;
     padding-right: 60px;
@@ -122,7 +123,10 @@ export default {
         font-size: 12px;
         border-top: none;
         line-height: 10px;
-        z-index: 88;
+        z-index: 20;
+        position: absolute;
+        top: 40px;
+        left: 0;
         dt {
           margin-bottom: 5px;
           font-size: 13px;

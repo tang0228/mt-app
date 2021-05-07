@@ -228,6 +228,7 @@ export default {};
       border: 1px solid #e5e5e5;
       box-sizing: border-box;
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+      z-index: 1000;
       .item {
         text-align: center;
         float: left;

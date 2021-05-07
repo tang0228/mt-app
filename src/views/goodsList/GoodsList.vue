@@ -1,6 +1,6 @@
 <template>
   <div class="goods-list-container">
-    <el-row>
+    <el-row  class="row">
       <Crumb />
     </el-row>
     <el-row>

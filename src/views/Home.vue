@@ -4,7 +4,7 @@
       <el-header height="">
         <Header />
       </el-header>
-      <el-main overflow="">
+      <el-main>
           <RouterView />
       </el-main>
       <el-footer height="">
