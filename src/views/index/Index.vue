@@ -9,7 +9,7 @@
         </el-col>
       </el-row>
       <el-row>
-        container
+        <Container />
       </el-row>
   </div>
 </template>
@@ -17,11 +17,13 @@
 <script>
 import Menu from '@/components/index/Menu.vue';
 import Life from '@/components/index/Life.vue';
+import Container from '@/components/index/Container.vue';
 
 export default {
   components: {
     Menu,
     Life,
+    Container,
   },
 };
 </script>

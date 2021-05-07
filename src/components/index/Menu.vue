@@ -25,33 +25,19 @@
 </template>
 
 <script>
+import api from '@/api/axios';
+
 export default {
   data() {
     return {
       currentDetail: null,
-      navList: [
-        {
-          type: 'food',
-          name: '美食',
-          items: [
-            {
-              title: '美食',
-              items: ['代金券', '甜点饮品', '火锅', '自助餐', '小吃快餐'],
-            },
-          ],
-        },
-        {
-          type: 'takeout',
-          name: '外卖',
-          items: [
-            {
-              title: '外卖',
-              items: ['美团外卖'],
-            },
-          ],
-        },
-      ],
+      navList: [],
     };
+  },
+  created() {
+    api.getLeftNav().then((resp) => {
+      this.navList = resp;
+    });
   },
   methods: {
     navEnter(item) {
